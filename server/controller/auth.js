@@ -29,7 +29,7 @@ export const users = async (req, res, next) => {
 // login process
 export const login = async (req, res, next) => {
   try {
-    const user = await User.findOne({ name: req.body.username });
+    const user = await User.findOne({ name: req.body.name }).populate("roleId");
 
     if (!user) return next(createError(304, " user not Found"));
     console.log(req.body.password === user.password);
@@ -45,9 +45,14 @@ export const login = async (req, res, next) => {
       { id: user._id, role: user.role },
       process.env.TOKEN
     );
-    const { password, role, ...otherDatail } = user._doc;
+    const { password, roleId, ...otherDatail } = user._doc;
 
-    res.json(role);
+    res
+      .cookie("access_token", token, {
+        httpOnly: true,
+      })
+      .status(200)
+      .json({ otherDatail, roleId });
   } catch (err) {
     next(err);
   }
