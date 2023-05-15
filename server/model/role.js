@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const roleSchema = new mongoose.Schema({
   roletitle: {
-    type: String,
+    type:String,
     required: true,
   },
 });

@@ -28,6 +28,7 @@ export const users = async (req, res, next) => {
 
 // login process
 export const login = async (req, res, next) => {
+  console.log(req.body);
   try {
     const user = await User.findOne({ name: req.body.name }).populate("roleId");
 
