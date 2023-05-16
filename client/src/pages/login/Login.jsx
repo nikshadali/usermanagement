@@ -25,8 +25,9 @@ const Login = () => {
         const res = await axios.post('http://localhost:8800/api/auth/login',credentials)
             dispatch({type:"LOGIN_SUCCESS", payload:res.data})
             navigate('/')
-        console.log(res.data)
-    }catch(err){
+            console.log(res.data)
+        }catch(err){
+            console.log(err.response.data)
         dispatch({type:"LOGIN_FAILURE", payload:err.response.data})
     }
 
@@ -49,7 +50,7 @@ const Login = () => {
                     <input type="password" placeholder="Password"name="password" onChange={handleChange}/>
                     
                     <button onClick={handleClick} >Login</button>
-                    {error && <span>error.message</span>}
+                    {error && <span>{error.message}</span>}
                 </form>
             </div>
 

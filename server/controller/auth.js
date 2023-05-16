@@ -31,8 +31,8 @@ export const login = async (req, res, next) => {
   console.log(req.body);
   try {
     const user = await User.findOne({ name: req.body.name }).populate("roleId");
-
-    if (!user) return next(createError(304, " user not Found"));
+    console.log("user =>", user);
+    if (!user) return next(createError(450, "User not found!"));
     console.log(req.body.password === user.password);
     const isPasswordCorrect = await bcrypt.compare(
       req.body.password,
@@ -55,6 +55,7 @@ export const login = async (req, res, next) => {
       .status(200)
       .json({ otherDatail, roleId });
   } catch (err) {
+    console.log(err);
     next(err);
   }
 };

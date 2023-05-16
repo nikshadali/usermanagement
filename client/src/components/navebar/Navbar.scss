@@ -1,0 +1,40 @@
+.navbar{
+    width: 100vw;
+    height: 08vh;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+   
+
+    .left{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        background: #FFA201;
+        justify-content: center;
+        color: #ffffff;
+    }
+    .right{
+        flex: 6;
+        display: flex;
+        
+        .search{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+                .searchIcon{
+                    font-size: 40px;
+                    color:#bebebe;
+                }
+            input{
+                height: 40px;
+                width: 50rem;
+                border: none;
+                outline: none;
+                font-size: 25px;
+                padding-left: 18px;
+            }
+        }
+    }
+
+}

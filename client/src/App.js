@@ -22,6 +22,7 @@ function App() {
         <Navbar />
         <div style={{ display: "flex" }}>
           <Sidebar />
+
           <div style={{ flex: "6" }}>
             <Outlet />
           </div>
