@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import { createError } from "../utils/createError.js";
 
 export const users = async (req, res, next) => {
+  console.log(req.body);
   try {
     const isEmail = await User.findOne({ email: req.body.email });
 

@@ -1,0 +1,91 @@
+.createuser{
+    width: 800px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 30px;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    .usertop{
+        display: flex;
+       justify-content: space-between;
+        padding: 30px 30px;
+        border-bottom: 1px solid lightgray;
+        width: 100%;
+        .userIcon{
+            cursor: pointer;
+        }
+        h3{
+            font-weight: 400;
+        }
+    }
+    .center{
+        display: flex;
+         width: 100%;
+         border-bottom: 1px solid lightgray;
+         min-height: 200px;
+         justify-content: space-around;
+         flex-wrap: wrap;
+         padding: 60px 30px;
+         gap: 50px;
+
+         input{
+            width: 45%;
+            height: 40px;
+            padding-left: 20px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+         }
+         &:focus{
+            outline: 1px solid orange;
+         }
+         select{
+            width: 45%;
+            height: 40px;
+            padding-left: 20px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            font-size: 16px;
+            font-weight: 400;
+         }
+
+    }
+    .bottom{
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        padding: 30px 30px;
+        button{
+            padding:12px 20px;
+            background: #FFA201;
+            color:#fff;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-size:16px;
+            font-weight: 400;
+            box-sizing: border-box;
+            cursor: pointer;
+            &:hover{
+                background: #f5b340;;
+                
+               
+            }
+            
+        }
+        .cancel{
+            background: #f8f9fa;
+            color:#001;
+            &:hover{
+                background: rgb(149, 149, 149);
+               
+                
+            }
+        }
+        
+    }
+}
