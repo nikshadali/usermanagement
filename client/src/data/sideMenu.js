@@ -4,7 +4,8 @@ export const sideMenu = [
   },
   {
     title: "Staff",
-    childerns: [
+    icon: "KeyboardArrowDownOutlinedIcon",
+    childrens: [
       {
         title: "User",
       },
@@ -14,18 +15,55 @@ export const sideMenu = [
     ],
   },
   {
-    title: "Dashboard",
+    title: "Product & Services",
   },
   {
-    title: "Dashboard",
+    title: "Product Stock",
   },
   {
-    title: "Dashboard",
+    title: "Customer",
   },
   {
-    title: "Dashboard",
+    title: "Vender",
   },
   {
-    title: "Dashboard",
+    title: "Presale",
+    icon: "KeyboardArrowDownOutlinedIcon",
+    childrens: [
+      {
+        title: "User",
+        path: "/user",
+      },
+      {
+        title: "Role",
+      },
+    ],
+  },
+  {
+    title: "Bank",
+    icon: "KeyboardArrowDownOutlinedIcon",
+    childrens: [
+      {
+        title: "Account",
+      },
+      {
+        title: "Transfer",
+      },
+    ],
+  },
+  {
+    title: "Income",
+    icon: "KeyboardArrowDownOutlinedIcon",
+    childrens: [
+      {
+        title: "Invoice",
+      },
+      {
+        title: "Revenue",
+      },
+      {
+        title: "Credit Note",
+      },
+    ],
   },
 ];

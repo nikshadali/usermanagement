@@ -14,6 +14,7 @@ import Home from "./pages/home/Home";
 import Register from "./pages/register/Register";
 import Navbar from "./components/navebar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
+import User from "./pages/user/User";
 function App() {
   const { user } = useContext(AuthContext);
   const Layout = () => {
@@ -49,6 +50,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/user",
+          element: <User />,
         },
       ],
     },

@@ -13,7 +13,7 @@ const Login = () => {
     })
 
     const {user, loading, error, dispatch} = useContext(AuthContext)
-    console.log("this is user =>",user)
+    
   const handleChange = (e) => {
     setSredentials((prev) => ({...prev, [e.target.name]:e.target.value}))
   }
