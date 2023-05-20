@@ -1,0 +1,22 @@
+.edit{
+    width: 160px;
+    height:100px;
+    background: #ffffff;
+    border-radius: 5px;
+    position: absolute;
+    top: 42px;
+    right: 27px;
+    box-shadow: 0 4px 24px 0 rgba(62, 57, 107, 0.18);
+    .item{
+        padding:12px 20px;
+        display: flex;
+        align-items: center;
+        gap:10px;
+        .deleteIcon{
+            cursor: pointer;
+        }
+        span{
+            cursor: pointer;
+        }
+    }
+}

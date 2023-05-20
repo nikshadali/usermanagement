@@ -3,6 +3,7 @@ import "./CreateUser.scss";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import useFetch from "../../hock/useFetch";
 import { useStepContext } from "@mui/material";
+import Edit from "../edit/Edit";
 import axios from "axios";
 const CreateUser = ({ closeModel }) => {
   const { data, loading, error } = useFetch("/role");
@@ -71,7 +72,9 @@ const CreateUser = ({ closeModel }) => {
         </select>
       </div>
       <div className="bottom">
-        <button className="cancel">Cancel</button>
+        <button className="cancel" onClick={closeModel}>
+          Cancel
+        </button>
         <button onClick={clickHandle}>Create</button>
       </div>
     </div>

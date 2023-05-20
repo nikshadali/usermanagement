@@ -8,6 +8,7 @@ export const sideMenu = [
     childrens: [
       {
         title: "User",
+        path: "/user",
       },
       {
         title: "Role",

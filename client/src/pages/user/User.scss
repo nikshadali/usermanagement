@@ -71,6 +71,12 @@
                 height: 100px;
                 border-radius: 50%;
             }
+            h3{
+                font-size: 16px;
+            }
+            span{
+                font-size: 14px;
+            }
         }
         .role{
             width: 120px;
@@ -84,6 +90,12 @@
             left: 20px;
             padding: 5px 5px;
             color: #ffffff;
+        }
+        .dot{
+            position: absolute;
+            top:20px;
+            right: 20px;
+            cursor: pointer;
         }
     }.add-user{
         width: 380px;
