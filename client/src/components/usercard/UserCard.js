@@ -1,9 +1,12 @@
 import { useState } from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import Edit from "../edit/Edit";
+import Delete from "../edit/Delete";
 
 const UserCard = ({ user }) => {
   const [openEdit, setOpenEdit] = useState(false);
+  const closeEdit = () => {
+    setOpenEdit(false);
+  };
   return (
     <div className="card">
       <div className="card-body">
@@ -18,7 +21,7 @@ const UserCard = ({ user }) => {
       <div className="dot">
         <MoreVertIcon onClick={() => setOpenEdit(!openEdit)} />
       </div>
-      {openEdit && <Edit user={user} />}
+      {openEdit && <Delete user={user} closeEdit={closeEdit} />}
     </div>
   );
 };

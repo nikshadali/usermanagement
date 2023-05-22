@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import "./CreateUser.scss";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import useFetch from "../../hock/useFetch";
-import { useStepContext } from "@mui/material";
-import Edit from "../edit/Edit";
 import axios from "axios";
+
 const CreateUser = ({ closeModel }) => {
   const { data, loading, error } = useFetch("/role");
   const [credential, setCredential] = useState({
@@ -24,7 +23,8 @@ const CreateUser = ({ closeModel }) => {
     return () => {
       document.body.style.overflowY = "scroll";
     };
-  }, []);
+  }, [data]);
+
   const clickHandle = async (e) => {
     e.preventDefault();
 

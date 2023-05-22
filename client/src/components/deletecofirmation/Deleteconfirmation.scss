@@ -1,0 +1,58 @@
+.wraper{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background: rgba(189,189,189,0.9);
+
+
+}
+.deleteconfirmation{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 15px;
+
+    .waring{
+        font-size: 120px;
+        color: orange;
+    }   
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:10px;
+        button{
+            padding: 15px 25px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            border-radius: 5px;
+            color:#ffffff;
+            cursor: pointer;
+        }
+        .no{
+            background: #ff3a6e;
+            &:hover{
+                background: #ff3a6eb4;
+            }
+        }
+        .yes{
+            background: #6fd943;
+            &:hover{
+                background: #83dd5d;
+            }
+        }
+       
+    }
+}
