@@ -2,7 +2,7 @@ import "./Deleteconfirmation.scss";
 import { useEffect } from "react";
 import axios from "axios";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
-const Deleteconfirmation = ({ user, close, closeEdit }) => {
+const Deleteconfirmation = ({ user, close, closeEdit, refetch }) => {
   useEffect(() => {
     document.body.style.overflowY = "hidden";
 
@@ -17,10 +17,12 @@ const Deleteconfirmation = ({ user, close, closeEdit }) => {
         `http://localhost:8800/api/user/${e._id}`
       );
       closeEdit();
+      refetch();
     } catch (err) {
       console.log("delete error", err);
     }
   };
+
   return (
     <>
       <div className="wraper"></div>

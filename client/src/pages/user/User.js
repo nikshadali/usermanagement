@@ -1,17 +1,21 @@
 import useFetch from "../../hock/useFetch";
 import "./User.scss";
-
+import { AuthContext } from "../../context/Authcontex";
 import CreateUser from "../../components/createuser/CreateUser";
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import UserCard from "../../components/usercard/UserCard";
 const User = () => {
   const [show, setShow] = useState(false);
-  const { data, loading, error } = useFetch("/user");
-
-  console.log("user data ", data);
+  const { data, loading, error, refetch } = useFetch("/user");
+  const { user } = useContext(AuthContext);
   const closeModel = () => {
     setShow(false);
+  };
+  console.log(user);
+
+  const myfetch = () => {
+    console.log("this myfetch function");
   };
   return (
     <>
@@ -27,7 +31,7 @@ const User = () => {
         </div>
         <div className="bottom">
           {data.map((user) => (
-            <UserCard user={user} />
+            <UserCard user={user} refetch={refetch} />
           ))}
           <div className="add-user">
             <button onClick={() => setShow(true)}>+</button>
@@ -36,7 +40,7 @@ const User = () => {
             <span>Click here to add New User</span>
           </div>
         </div>
-        {show && <CreateUser closeModel={closeModel} />}
+        {show && <CreateUser closeModel={closeModel} refetch={refetch} />}
       </div>
     </>
   );

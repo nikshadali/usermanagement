@@ -8,7 +8,7 @@ const Sidebar = (props) => {
   return (
     <div className="sidebar">
       {sideMenu.map((item) => (
-        <Sidebarmenu item={item} />
+        <Sidebarmenu item={item} key={item.title} />
       ))}
     </div>
   );

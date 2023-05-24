@@ -2,10 +2,15 @@ import { useState } from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Delete from "../edit/Delete";
 
-const UserCard = ({ user }) => {
+const UserCard = ({ user, refetch }) => {
   const [openEdit, setOpenEdit] = useState(false);
+
   const closeEdit = () => {
     setOpenEdit(false);
+  };
+
+  const openEditfun = () => {
+    setOpenEdit(!openEdit);
   };
   return (
     <div className="card">
@@ -19,9 +24,11 @@ const UserCard = ({ user }) => {
         <span>{user.roleId.roletitle}</span>
       </div>
       <div className="dot">
-        <MoreVertIcon onClick={() => setOpenEdit(!openEdit)} />
+        <MoreVertIcon onClick={openEditfun} />
       </div>
-      {openEdit && <Delete user={user} closeEdit={closeEdit} />}
+      {openEdit && (
+        <Delete user={user} closeEdit={closeEdit} refetch={refetch} />
+      )}
     </div>
   );
 };

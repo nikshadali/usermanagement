@@ -4,7 +4,7 @@ import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import useFetch from "../../hock/useFetch";
 import axios from "axios";
 
-const CreateUser = ({ closeModel }) => {
+const CreateUser = ({ closeModel, refetch }) => {
   const { data, loading, error } = useFetch("/role");
   const [credential, setCredential] = useState({
     name: "",
@@ -16,14 +16,14 @@ const CreateUser = ({ closeModel }) => {
   const changeHandle = (e) => {
     setCredential((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
-  console.log(credential);
+
   useEffect(() => {
     document.body.style.overflowY = "hidden";
 
     return () => {
       document.body.style.overflowY = "scroll";
     };
-  }, [data]);
+  }, []);
 
   const clickHandle = async (e) => {
     e.preventDefault();
@@ -34,6 +34,7 @@ const CreateUser = ({ closeModel }) => {
         credential
       );
       closeModel();
+      refetch();
     } catch (err) {
       console.log(err);
     }
