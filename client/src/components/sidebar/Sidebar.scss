@@ -1,6 +1,6 @@
 .sidebar{
     height: 100vh;
-    flex: 1.01;
+    flex: 1;
     background: #042954;
     box-sizing: border-box;
     .item{
@@ -22,9 +22,7 @@
              justify-content: space-between;
              padding-right: 20px;
              cursor: pointer;
-            span{
-               
-            }
+           
             .icon{
                 transform: rotate(90deg);
                 color:orange;

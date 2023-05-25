@@ -7,7 +7,11 @@ const Sidebarmenu = ({ item }) => {
   return (
     <div className="item">
       <div className="top" onClick={() => setShow(!show)}>
-        <span>{item.title}</span>
+        <span>
+          <Link to={item.path ? item.path : "#"} className="link">
+            {item.title}
+          </Link>
+        </span>
         {item.icon && (
           <ChevronRightOutlinedIcon className={show ? "icon" : ""} />
         )}

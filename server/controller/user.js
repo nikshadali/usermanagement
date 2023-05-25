@@ -29,3 +29,13 @@ export const updateUser = async (req, res, next) => {
     next(err);
   }
 };
+
+export const getUser = async (req, res, next) => {
+  console.log(req.body);
+  try {
+    const user = await User.findById(req.params.id).populate("roleId");
+    res.status(200).json(user);
+  } catch (err) {
+    next(err);
+  }
+};

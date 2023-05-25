@@ -5,6 +5,7 @@ import CreateUser from "../../components/createuser/CreateUser";
 import { useState, useContext } from "react";
 
 import UserCard from "../../components/usercard/UserCard";
+import SingleUser from "../../components/singleuser/SingleUser";
 const User = () => {
   const [show, setShow] = useState(false);
   const { data, loading, error, refetch } = useFetch("/user");
@@ -12,36 +13,45 @@ const User = () => {
   const closeModel = () => {
     setShow(false);
   };
-  console.log(user);
-
+  const { roletitle } = user.roleId;
   const myfetch = () => {
     console.log("this myfetch function");
   };
   return (
     <>
-      <div className={show ? "model-wrapper" : ""} onClick={closeModel}></div>
-      <div className="user">
-        <div className="top">
-          <div className="left">
-            <h3>User Management</h3>
-          </div>
-          <div className="right">
-            <button onClick={() => setShow(true)}>+</button>
-          </div>
-        </div>
-        <div className="bottom">
-          {data.map((user) => (
-            <UserCard user={user} refetch={refetch} />
-          ))}
-          <div className="add-user">
-            <button onClick={() => setShow(true)}>+</button>
+      {roletitle === "Admin" ? (
+        <>
+          <div
+            className={show ? "model-wrapper" : ""}
+            onClick={closeModel}
+          ></div>
+          <div className="user">
+            <div className="top">
+              <div className="left">
+                <h3>User Management</h3>
+              </div>
+              <div className="right">
+                <button onClick={() => setShow(true)}>+</button>
+              </div>
+            </div>
+            <div className="bottom">
+              {data.map((user) => (
+                <UserCard user={user} refetch={refetch} key={user._id} />
+              ))}
+              <div className="add-user">
+                <button onClick={() => setShow(true)}>+</button>
 
-            <h3>New User</h3>
-            <span>Click here to add New User</span>
+                <h3>New User</h3>
+                <span>Click here to add New User</span>
+              </div>
+            </div>
+            {show && <CreateUser closeModel={closeModel} refetch={refetch} />}
           </div>
-        </div>
-        {show && <CreateUser closeModel={closeModel} refetch={refetch} />}
-      </div>
+          )
+        </>
+      ) : (
+        <SingleUser />
+      )}
     </>
   );
 };

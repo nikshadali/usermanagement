@@ -23,6 +23,7 @@ export const sideMenu = [
   },
   {
     title: "Customer",
+    path: "/customer",
   },
   {
     title: "Vender",

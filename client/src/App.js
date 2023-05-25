@@ -15,6 +15,7 @@ import Register from "./pages/register/Register";
 import Navbar from "./components/navebar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import User from "./pages/user/User";
+import Customer from "./pages/customer/Customer";
 function App() {
   const { user } = useContext(AuthContext);
   const Layout = () => {
@@ -54,6 +55,10 @@ function App() {
         {
           path: "/user",
           element: <User />,
+        },
+        {
+          path: "/customer",
+          element: <Customer />,
         },
       ],
     },
