@@ -1,17 +1,17 @@
-import "./Customer.scss";
-import CustomerForm from "../../components/customerform/CustomerForm";
+import "./Product.scss";
+import ProductForm from "../../components/productform/ProductForm";
 import { useState } from "react";
-const Customer = () => {
+const Product = () => {
   const [open, setOpen] = useState(false);
 
   const closeForm = () => {
     setOpen(false);
   };
   return (
-    <div className="customer">
+    <div className="product">
       <div className="top">
         <div className="left">
-          <h3>User Management</h3>
+          <h3>Product & Service</h3>
         </div>
         <div className="right">
           <button onClick={() => setOpen(!open)}>+</button>
@@ -160,9 +160,9 @@ const Customer = () => {
           </table>
         </div>
       </div>
-      {open && <CustomerForm closeForm={closeForm} />}
+      {open && <ProductForm closeForm={closeForm} />}
     </div>
   );
 };
 
-export default Customer;
+export default Product;

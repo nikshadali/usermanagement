@@ -16,6 +16,7 @@ import Navbar from "./components/navebar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import User from "./pages/user/User";
 import Customer from "./pages/customer/Customer";
+import Product from "./pages/product/Product";
 function App() {
   const { user } = useContext(AuthContext);
   const Layout = () => {
@@ -59,6 +60,10 @@ function App() {
         {
           path: "/customer",
           element: <Customer />,
+        },
+        {
+          path: "/product",
+          element: <Product />,
         },
       ],
     },

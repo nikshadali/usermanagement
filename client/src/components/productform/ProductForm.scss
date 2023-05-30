@@ -1,0 +1,92 @@
+.wraper{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+     bottom:0;
+     background:rgba(189,189,189,0.9);
+     z-index: 1;
+}
+.customerform{
+    position: absolute;
+    width: 900px;
+   
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    .card{
+        width: 100%;
+        padding: 30px 0;
+        height: auto;
+        background: #ffffff;
+        border: 1px solid rgba(0,0,0,0.2);
+        border-radius: 10px;
+    .card-head{
+            border-bottom: 0.5px solid lightgray;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            justify-content: space-between;
+            .closebtn{
+                cursor: pointer;
+            }
+            
+        }
+        .card-body{
+           padding: 30px 0;
+            border: 1px solid lightgray;
+            .item{
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 40px;
+               
+                input{
+                    height: 40px;
+                    width: 400px;
+                    padding-left: 10px;
+                    
+                    border: 1px solid lightgray;
+                    outline: none;
+                }
+            }
+            
+            
+        }
+        .card-footer{
+            display: flex;
+            justify-content: end;
+            padding:25px 40px;
+             gap: 10px;
+           
+           button{
+            padding:12px 20px;
+            background: #FFA201;
+            color:#fff;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-size:16px;
+            font-weight: 400;
+            box-sizing: border-box;
+            cursor: pointer;
+            &:hover{
+                background: #f5b340;;
+                
+               
+            }
+            
+        }
+        .cancel{
+            background: #f8f9fa;
+            color:#001;
+            &:hover{
+                background: rgb(149, 149, 149);
+               
+            }
+        }
+        }
+        
+    }
+}

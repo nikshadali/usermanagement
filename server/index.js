@@ -8,7 +8,8 @@ import cookieParser from "cookie-parser";
 import authRouter from "./routes/auth.js";
 import roleRouer from "./routes/role.js";
 import userRouter from "./routes/user.js";
-
+import customerRouter from "./routes/customer.js";
+import productRouter from "./routes/product.js";
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO);
@@ -31,6 +32,8 @@ app.use(cookieParser());
 app.use("/api/auth", authRouter);
 app.use("/api/role", roleRouer);
 app.use("/api/user", userRouter);
+app.use("/api/customer", customerRouter);
+app.use("/api/product", productRouter);
 
 //Handle Error
 app.use((err, req, res, next) => {
