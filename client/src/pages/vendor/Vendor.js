@@ -1,7 +1,7 @@
-import "./Customer.scss";
-import CustomerForm from "../../components/customerform/CustomerForm";
+import "./Vendor.scss";
+import VendorForm from "../../components/vendorForm/VendorForm";
 import { useState } from "react";
-const Customer = () => {
+const Vendor = () => {
   const [open, setOpen] = useState(false);
 
   const closeForm = () => {
@@ -11,7 +11,7 @@ const Customer = () => {
     <div className="customer">
       <div className="top">
         <div className="left">
-          <h3>Customer</h3>
+          <h3>Vendor</h3>
         </div>
         <div className="right">
           <button onClick={() => setOpen(!open)}>+</button>
@@ -160,9 +160,9 @@ const Customer = () => {
           </table>
         </div>
       </div>
-      {open && <CustomerForm closeForm={closeForm} />}
+      {open && <VendorForm closeForm={closeForm} />}
     </div>
   );
 };
 
-export default Customer;
+export default Vendor;

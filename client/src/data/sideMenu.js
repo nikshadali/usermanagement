@@ -17,6 +17,7 @@ export const sideMenu = [
   },
   {
     title: "Product & Services",
+    path: "/product",
   },
   {
     title: "Product Stock",
@@ -27,6 +28,7 @@ export const sideMenu = [
   },
   {
     title: "Vender",
+    path: "/vendor",
   },
   {
     title: "Presale",

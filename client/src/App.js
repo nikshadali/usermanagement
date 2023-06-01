@@ -17,6 +17,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import User from "./pages/user/User";
 import Customer from "./pages/customer/Customer";
 import Product from "./pages/product/Product";
+import Vendor from "./pages/vendor/Vendor";
 function App() {
   const { user } = useContext(AuthContext);
   const Layout = () => {
@@ -64,6 +65,10 @@ function App() {
         {
           path: "/product",
           element: <Product />,
+        },
+        {
+          path: "/vendor",
+          element: <Vendor />,
         },
       ],
     },

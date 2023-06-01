@@ -10,6 +10,7 @@ import roleRouer from "./routes/role.js";
 import userRouter from "./routes/user.js";
 import customerRouter from "./routes/customer.js";
 import productRouter from "./routes/product.js";
+import vendorRouter from "./routes/vendor.js";
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO);
@@ -34,6 +35,7 @@ app.use("/api/role", roleRouer);
 app.use("/api/user", userRouter);
 app.use("/api/customer", customerRouter);
 app.use("/api/product", productRouter);
+app.use("/api/vendor", vendorRouter);
 
 //Handle Error
 app.use((err, req, res, next) => {
