@@ -1,4 +1,4 @@
-.product{
+.productstock{
     
     width: 100%;
     height: 100%;
@@ -38,41 +38,10 @@
             }
         }
     }
-    .center{
-        background: #ffffff;
-        display: flex;
-        padding: 25px 20px;
-        justify-content: end;
-        margin-bottom: 20px;
-        box-shadow: 0 6px 30px rgba(182,186,203,0.3);
-        border-radius: 10px;
-        gap: 8px;
-
-        button{
-            padding: 5px 10px;
-            border: none;
-            outline: none;
-            color: #ffffff;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-        }
-        .search{
-            background: #5EB839;
-        }
-        .reset{
-            background: #ff3a6e;
-        }
-        .css-qbdosj-Input{
-            width: 400px;
-        }
-    }
     .bottom{
         width: 100%;
        min-height: 70px;
-        box-shadow: 0 6px 30px rgba(182, 186, 203, 0.3);
+        box-shadow: 0 6px 30px rgba(182, 186, 203, 0.3);;
         background: #ffffff;
         border-radius: 10px;
        

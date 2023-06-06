@@ -21,6 +21,7 @@ export const sideMenu = [
   },
   {
     title: "Product Stock",
+    path: "/productstock",
   },
   {
     title: "Customer",
@@ -35,11 +36,11 @@ export const sideMenu = [
     icon: "KeyboardArrowDownOutlinedIcon",
     childrens: [
       {
-        title: "User",
-        path: "/user",
+        title: "Proposal",
+        path: "#",
       },
       {
-        title: "Role",
+        title: "Retainers",
       },
     ],
   },

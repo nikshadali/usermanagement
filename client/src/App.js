@@ -19,6 +19,7 @@ import Customer from "./pages/customer/Customer";
 import Product from "./pages/product/Product";
 import Vendor from "./pages/vendor/Vendor";
 import Bill from "./pages/bill/Bill";
+import ProductStock from "./pages/productstock/ProductStock";
 function App() {
   const { user } = useContext(AuthContext);
   const Layout = () => {
@@ -74,6 +75,10 @@ function App() {
         {
           path: "/bill",
           element: <Bill />,
+        },
+        {
+          path: "/productstock",
+          element: <ProductStock />,
         },
       ],
     },
