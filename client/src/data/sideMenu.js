@@ -70,4 +70,20 @@ export const sideMenu = [
       },
     ],
   },
+  {
+    title: "Expense",
+    icon: "KeyboardArrowDownOutlinedIcon",
+    childrens: [
+      {
+        title: "Bill",
+        path: "/bill",
+      },
+      {
+        title: "Payment",
+      },
+      {
+        title: "Debit Note",
+      },
+    ],
+  },
 ];

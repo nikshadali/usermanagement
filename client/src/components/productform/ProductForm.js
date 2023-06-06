@@ -20,7 +20,7 @@ const ProductForm = ({ closeForm }) => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8800/api/product",
+        "http://localhost:8800/api/product/register",
         credintial
       );
       closeForm();

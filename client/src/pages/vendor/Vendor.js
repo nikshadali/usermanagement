@@ -8,7 +8,7 @@ const Vendor = () => {
     setOpen(false);
   };
   return (
-    <div className="customer">
+    <div className="vendor">
       <div className="top">
         <div className="left">
           <h3>Vendor</h3>

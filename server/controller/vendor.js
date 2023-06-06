@@ -12,3 +12,10 @@ export const createVendor = async (req, res, next) => {
     next(err);
   }
 };
+
+export const getVendors = async (req, res, next) => {
+  try {
+    const vendors = await Vendor.find();
+    res.status(200).json(vendors);
+  } catch (err) {}
+};
