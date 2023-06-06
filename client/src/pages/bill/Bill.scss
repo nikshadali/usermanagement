@@ -95,21 +95,22 @@
                         border-spacing: 0;
                     }
                     thead{
-                        height: 50px;
-                       
+                         height: 50px;
+                        
+                        
                         
 
                         tr{
                             background: #362F4B;
                             color:#ffffff;
-                           
+                          
                         }
                     }
                     tbody{
-                            text-align: center;  
+                       text-align: center;     
                         tr{
                        
-                           
+                          
                         
                         td{
                             
@@ -136,12 +137,21 @@
                         }
                         button{
                             cursor: pointer;
+                            background: none;
+                            border: none;
+                            outline: none;
+                            padding-right: 15px;
                         }
                         .deletebtn{
                             color: red;
                             background: none;
                             border: none;
                         }
+                        }
+                        .totalamount{
+                            td{
+                                padding: 7px 0;
+                            }
                         }
                     }
                 }

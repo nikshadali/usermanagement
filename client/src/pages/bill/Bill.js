@@ -1,6 +1,6 @@
 import "./Bill.scss";
 import { useState } from "react";
-import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
+import DeleteIcon from "@mui/icons-material/Delete";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import useFetch from "../../hock/useFetch";
 import Select from "react-select";
@@ -139,8 +139,8 @@ const Bill = () => {
                       />
                     </td>
                     <td>Ref</td>
-                    <td>{creditial.totalprice}</td>
                     <td>{creditial.qty * creditial.price}</td>
+                    <td></td>
                   </tr>
                   {addItem.map((item) => (
                     <tr>
@@ -184,15 +184,51 @@ const Bill = () => {
                         />
                       </td>
                       <td>Ref</td>
-                      <td>{creditial.totalprice}</td>
+
                       <td>{creditial.qty * creditial.price}</td>
                       <td>
                         <button onClick={() => handleDelte(item.id)}>
-                          <DeleteOutlineOutlinedIcon className="deletebtn" />
+                          <DeleteIcon className="deletebtn" />
                         </button>
                       </td>
                     </tr>
                   ))}
+                  <tr>
+                    <td
+                      colSpan={5}
+                      style={{ border: "none", padding: "40px" }}
+                    ></td>
+                  </tr>
+                  <tr className="totalamount">
+                    <td
+                      colSpan={5}
+                      style={{ borderTop: "1px solid lightgray" }}
+                    ></td>
+                    <td style={{ borderTop: "1px solid lightgray" }}>
+                      Subtotal
+                    </td>
+                    <td
+                      colSpan={2}
+                      style={{ borderTop: "1px solid lightgray" }}
+                    >
+                      0
+                    </td>
+                  </tr>
+                  <tr className="totalamount">
+                    <td colSpan={5}></td>
+                    <td>Discount</td>
+                    <td colSpan={2}>0</td>
+                  </tr>
+                  <tr className="totalamount">
+                    <td colSpan={5}></td>
+                    <td>Tax</td>
+                    <td colSpan={2}>0</td>
+                  </tr>
+                  <tr className="totalamount">
+                    <td colSpan={5}></td>
+                    <td>Total</td>
+                    <td colSpan={2}>0</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
