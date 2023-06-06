@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body{
-  background: #F6F8F8;
+  background: linear-gradient(141.55deg, rgba(240, 244, 243, 0) 3.46%, #f0f4f3 99.86%);
+
   font-family: 'Open Sans', sans-serif;
 }
 .link{

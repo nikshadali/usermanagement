@@ -37,10 +37,11 @@ export const sideMenu = [
     childrens: [
       {
         title: "Proposal",
-        path: "#",
+        path: "/proposal",
       },
       {
         title: "Retainers",
+        path: "/retainer",
       },
     ],
   },

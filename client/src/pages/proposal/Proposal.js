@@ -1,22 +1,42 @@
-import "./ProductStock.scss";
+import "./Proposal.scss";
 import ProductForm from "../../components/productform/ProductForm";
 import { useState } from "react";
-
-const ProductStock = () => {
+import Select from "react-select";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import RestartAltOutlinedIcon from "@mui/icons-material/RestartAltOutlined";
+const Proposal = () => {
   const [open, setOpen] = useState(false);
-
+  const options = [
+    { value: "Accessuries", label: "Accessuries" },
+    { value: "Accessuries", label: "Accessuries" },
+    { value: "Accessuries", label: "Accessuries" },
+    { value: "Accessuries", label: "Accessuries" },
+    { value: "Accessuries", label: "Accessuries" },
+  ];
   const closeForm = () => {
     setOpen(false);
   };
   return (
-    <div className="productstock">
+    <div className="proposal">
       <div className="top">
         <div className="left">
-          <h3>Product Stock</h3>
+          <h3>Proposal</h3>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <button onClick={() => setOpen(!open)}>+</button>
+        </div>
       </div>
-
+      <div className="center">
+        <Select options={options} />
+        <Select options={options} />
+        <Select options={options} />
+        <button className="search">
+          <SearchOutlinedIcon />
+        </button>
+        <button className="reset">
+          <RestartAltOutlinedIcon />
+        </button>
+      </div>
       <div className="bottom">
         <div className="top">
           <div className="left">
@@ -165,4 +185,4 @@ const ProductStock = () => {
   );
 };
 
-export default ProductStock;
+export default Proposal;

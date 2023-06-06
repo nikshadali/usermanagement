@@ -11,7 +11,7 @@ import {
   Outlet,
 } from "react-router-dom";
 import Home from "./pages/home/Home";
-import Register from "./pages/register/Register";
+
 import Navbar from "./components/navebar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import User from "./pages/user/User";
@@ -20,6 +20,8 @@ import Product from "./pages/product/Product";
 import Vendor from "./pages/vendor/Vendor";
 import Bill from "./pages/bill/Bill";
 import ProductStock from "./pages/productstock/ProductStock";
+import Proposal from "./pages/proposal/Proposal";
+import Retainer from "./pages/retainer/Retainer";
 function App() {
   const { user } = useContext(AuthContext);
   const Layout = () => {
@@ -79,6 +81,14 @@ function App() {
         {
           path: "/productstock",
           element: <ProductStock />,
+        },
+        {
+          path: "/proposal",
+          element: <Proposal />,
+        },
+        {
+          path: "/retainer",
+          element: <Retainer />,
         },
       ],
     },
