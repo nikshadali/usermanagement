@@ -18,10 +18,11 @@ import User from "./pages/user/User";
 import Customer from "./pages/customer/Customer";
 import Product from "./pages/product/Product";
 import Vendor from "./pages/vendor/Vendor";
-import Bill from "./pages/bill/Bill";
+import BillCreate from "./pages/billcreate/BillCreate";
 import ProductStock from "./pages/productstock/ProductStock";
 import Proposal from "./pages/proposal/Proposal";
 import Retainer from "./pages/retainer/Retainer";
+import Bill from "./pages/bill/Bill";
 function App() {
   const { user } = useContext(AuthContext);
   const Layout = () => {
@@ -75,8 +76,8 @@ function App() {
           element: <Vendor />,
         },
         {
-          path: "/bill",
-          element: <Bill />,
+          path: "/billcreate",
+          element: <BillCreate />,
         },
         {
           path: "/productstock",
@@ -89,6 +90,10 @@ function App() {
         {
           path: "/retainer",
           element: <Retainer />,
+        },
+        {
+          path: "/bill",
+          element: <Bill />,
         },
       ],
     },
